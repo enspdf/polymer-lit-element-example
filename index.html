@@ -11,8 +11,18 @@
 <body>
     <h1>Lit Element</h1>
 
-    <script src="./src/my-element.js" type="module"></script>
+    <script src="./src/index.js" type="module"></script>
     <my-element></my-element>
+    <my-message id="msg" msg="Custom message property"></my-message>
+    <button id="btnChangeMessage">Change Single Message</button>
+    <my-message id="msg2" msg="Custom message property two"></my-message>
+
+    <script>
+        document.getElementById("btnChangeMessage").addEventListener("click", () => {
+            document.getElementById("msg").setAttribute("msg", "Values from id attribute");
+            document.getElementById("msg").setAttribute("color", "gray");
+        });
+    </script>
 </body>
 
 </html>
